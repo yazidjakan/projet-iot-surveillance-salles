@@ -1,0 +1,1196 @@
+[
+    {
+        "id": "c6129c241a189ffc",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "main_flow",
+        "type": "tab",
+        "label": "Surveillance Salle de Classe",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "tab_multi_salles",
+        "type": "tab",
+        "label": "📊 Multi-Salles",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "tab_configuration",
+        "type": "tab",
+        "label": "⚙️ Configuration",
+        "disabled": true,
+        "info": ""
+    },
+    {
+        "id": "mqtt_broker",
+        "type": "mqtt-broker",
+        "name": "Mosquitto Local",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "dashboard_tab",
+        "type": "ui_tab",
+        "name": "Surveillance IoT",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "group_capteurs",
+        "type": "ui_group",
+        "name": "Capteurs en Temps Réel",
+        "tab": "dashboard_tab",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "group_historique",
+        "type": "ui_group",
+        "name": "Historique",
+        "tab": "dashboard_tab",
+        "order": 2,
+        "disp": true,
+        "width": "12",
+        "collapse": false
+    },
+    {
+        "id": "group_status",
+        "type": "ui_group",
+        "name": "État et Alertes",
+        "tab": "dashboard_tab",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "b592cd5ced6a48d5",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "tab_dashboard_multi",
+        "type": "ui_tab",
+        "name": "🏫 Multi-Salles",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "group_salle_A101",
+        "type": "ui_group",
+        "name": "Salle A101",
+        "tab": "tab_dashboard_multi",
+        "order": 1,
+        "disp": true,
+        "width": "12",
+        "collapse": false
+    },
+    {
+        "id": "group_salle_A102",
+        "type": "ui_group",
+        "name": "Salle A102",
+        "tab": "tab_dashboard_multi",
+        "order": 2,
+        "disp": true,
+        "width": "12",
+        "collapse": false
+    },
+    {
+        "id": "group_salle_B201",
+        "type": "ui_group",
+        "name": "Salle B201",
+        "tab": "tab_dashboard_multi",
+        "order": 3,
+        "disp": true,
+        "width": "12",
+        "collapse": false
+    },
+    {
+        "id": "group_salle_B202",
+        "type": "ui_group",
+        "name": "Salle B202",
+        "tab": "tab_dashboard_multi",
+        "order": 4,
+        "disp": true,
+        "width": "12",
+        "collapse": false
+    },
+    {
+        "id": "group_salle_C301",
+        "type": "ui_group",
+        "name": "Salle C301",
+        "tab": "tab_dashboard_multi",
+        "order": 5,
+        "disp": true,
+        "width": "12",
+        "collapse": false
+    },
+    {
+        "id": "group_stats_globales",
+        "type": "ui_group",
+        "name": "Statistiques Globales",
+        "tab": "tab_dashboard_multi",
+        "order": 6,
+        "disp": true,
+        "width": "12",
+        "collapse": false
+    },
+    {
+        "id": "tab_dashboard_config",
+        "type": "ui_tab",
+        "name": "⚙️ Configuration",
+        "icon": "settings",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "group_seuils",
+        "type": "ui_group",
+        "name": "🎚️ Seuils d'Alerte",
+        "tab": "tab_dashboard_config",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "group_controles",
+        "type": "ui_group",
+        "name": "⚙️ Contrôles",
+        "tab": "tab_dashboard_config",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "group_status_config",
+        "type": "ui_group",
+        "name": "📊 Statut",
+        "tab": "tab_dashboard_config",
+        "order": 3,
+        "disp": true,
+        "width": "12",
+        "collapse": false
+    },
+    {
+        "id": "group_export",
+        "type": "ui_group",
+        "name": "📤 Export de Données",
+        "tab": "tab_dashboard_config",
+        "order": 4,
+        "disp": true,
+        "width": "12",
+        "collapse": false
+    },
+    {
+        "id": "mqtt_in_presence",
+        "type": "mqtt in",
+        "z": "main_flow",
+        "name": "Présence",
+        "topic": "salle_classe/presence",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "mqtt_broker",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 100,
+        "y": 100,
+        "wires": [
+            [
+                "gauge_presence",
+                "chart_presence",
+                "debug_presence"
+            ]
+        ]
+    },
+    {
+        "id": "mqtt_in_temperature",
+        "type": "mqtt in",
+        "z": "main_flow",
+        "name": "Température",
+        "topic": "salle_classe/temperature",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "mqtt_broker",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 110,
+        "y": 200,
+        "wires": [
+            [
+                "gauge_temperature",
+                "chart_temperature",
+                "debug_temperature"
+            ]
+        ]
+    },
+    {
+        "id": "mqtt_in_luminosite",
+        "type": "mqtt in",
+        "z": "main_flow",
+        "name": "Luminosité",
+        "topic": "salle_classe/luminosite",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "mqtt_broker",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 110,
+        "y": 300,
+        "wires": [
+            [
+                "gauge_luminosite",
+                "chart_luminosite",
+                "debug_luminosite"
+            ]
+        ]
+    },
+    {
+        "id": "mqtt_in_complet",
+        "type": "mqtt in",
+        "z": "main_flow",
+        "name": "Données complètes",
+        "topic": "salle_classe/donnees_completes",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "mqtt_broker",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 130,
+        "y": 400,
+        "wires": [
+            [
+                "text_status",
+                "function_alert"
+            ]
+        ]
+    },
+    {
+        "id": "gauge_presence",
+        "type": "ui_gauge",
+        "z": "main_flow",
+        "name": "Jauge Présence",
+        "group": "group_capteurs",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "👥 Présence",
+        "label": "personnes",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "30",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "10",
+        "seg2": "20",
+        "x": 400,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "gauge_temperature",
+        "type": "ui_gauge",
+        "z": "main_flow",
+        "name": "Jauge Température",
+        "group": "group_capteurs",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "🌡️ Température",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": "18",
+        "max": "28",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "22",
+        "seg2": "25",
+        "x": 420,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "gauge_luminosite",
+        "type": "ui_gauge",
+        "z": "main_flow",
+        "name": "Jauge Luminosité",
+        "group": "group_capteurs",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "💡 Luminosité",
+        "label": "lux",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1000",
+        "colors": [
+            "#ca3838",
+            "#e6e600",
+            "#00b500"
+        ],
+        "seg1": "300",
+        "seg2": "600",
+        "x": 420,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "chart_presence",
+        "type": "ui_chart",
+        "z": "main_flow",
+        "name": "Graphique Présence",
+        "group": "group_historique",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Présence (dernière minute)",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "En attente de données...",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "30",
+        "removeOlder": "10",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": "",
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 440,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "chart_temperature",
+        "type": "ui_chart",
+        "z": "main_flow",
+        "name": "Graphique Température",
+        "group": "group_historique",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Température (dernière minute)",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "En attente de données...",
+        "dot": false,
+        "ymin": "18",
+        "ymax": "28",
+        "removeOlder": "10",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": "",
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 440,
+        "y": 230,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "chart_luminosite",
+        "type": "ui_chart",
+        "z": "main_flow",
+        "name": "Graphique Luminosité",
+        "group": "group_historique",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "Luminosité (dernière minute)",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "En attente de données...",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "1000",
+        "removeOlder": "10",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": "",
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 430,
+        "y": 330,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "text_status",
+        "type": "ui_text",
+        "z": "main_flow",
+        "group": "group_status",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Statut Salle",
+        "label": "📊 État de la salle",
+        "format": "{{msg.payload.salle_occupee ? '🟢 Occupée' : '🔴 Vide'}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 410,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "function_alert",
+        "type": "function",
+        "z": "main_flow",
+        "name": "Logique Alertes",
+        "func": "const data = msg.payload;\nlet alertes = [];\n\n// Alerte température trop élevée\nif (data.temperature > 25) {\n    alertes.push('⚠️ Température élevée: ' + data.temperature + '°C');\n}\n\n// Alerte température trop basse\nif (data.temperature < 19) {\n    alertes.push('❄️ Température basse: ' + data.temperature + '°C');\n}\n\n// Alerte luminosité insuffisante si salle occupée\nif (data.salle_occupee && data.luminosite < 300) {\n    alertes.push('🔦 Luminosité insuffisante: ' + data.luminosite + ' lux');\n}\n\n// Alerte salle occupée avec beaucoup de monde\nif (data.presence > 25) {\n    alertes.push('👥 Salle presque pleine: ' + data.presence + ' personnes');\n}\n\nif (alertes.length > 0) {\n    msg.payload = alertes.join(' | ');\n    return msg;\n}\n\nreturn null;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 400,
+        "y": 450,
+        "wires": [
+            [
+                "text_alert"
+            ]
+        ]
+    },
+    {
+        "id": "text_alert",
+        "type": "ui_text",
+        "z": "main_flow",
+        "group": "group_status",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "Alertes",
+        "label": "🚨 Alertes",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 590,
+        "y": 450,
+        "wires": []
+    },
+    {
+        "id": "debug_presence",
+        "type": "debug",
+        "z": "main_flow",
+        "name": "Debug Présence",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 430,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "debug_temperature",
+        "type": "debug",
+        "z": "main_flow",
+        "name": "Debug Température",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 440,
+        "y": 170,
+        "wires": []
+    },
+    {
+        "id": "debug_luminosite",
+        "type": "debug",
+        "z": "main_flow",
+        "name": "Debug Luminosité",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 430,
+        "y": 270,
+        "wires": []
+    },
+    {
+        "id": "mqtt_toutes_salles",
+        "type": "mqtt in",
+        "z": "tab_multi_salles",
+        "name": "Toutes les salles",
+        "topic": "salles/toutes",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "mqtt_broker",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 120,
+        "y": 100,
+        "wires": [
+            [
+                "function_router_salles"
+            ]
+        ]
+    },
+    {
+        "id": "function_router_salles",
+        "type": "function",
+        "z": "tab_multi_salles",
+        "name": "Router par salle",
+        "func": "const data = msg.payload;\nconst salle = data.salle;\n\n// Créer un message pour chaque salle\nreturn [\n    salle === 'A101' ? msg : null,\n    salle === 'A102' ? msg : null,\n    salle === 'B201' ? msg : null,\n    salle === 'B202' ? msg : null,\n    salle === 'C301' ? msg : null\n];",
+        "outputs": 5,
+        "noerr": 0,
+        "x": 320,
+        "y": 100,
+        "wires": [
+            [
+                "text_A101"
+            ],
+            [
+                "text_A102"
+            ],
+            [
+                "text_B201"
+            ],
+            [
+                "text_B202"
+            ],
+            [
+                "text_C301"
+            ]
+        ]
+    },
+    {
+        "id": "text_A101",
+        "type": "ui_text",
+        "z": "tab_multi_salles",
+        "group": "group_salle_A101",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Salle A101",
+        "label": "📍 Salle A101",
+        "format": "{{msg.payload.salle_occupee ? '🟢 Occupée' : '🔴 Vide'}} | {{msg.payload.presence}}/{{msg.payload.capacite}} pers. ({{msg.payload.taux_occupation}}%) | {{msg.payload.temperature}}°C | {{msg.payload.luminosite}} lux",
+        "layout": "row-spread",
+        "x": 550,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "text_A102",
+        "type": "ui_text",
+        "z": "tab_multi_salles",
+        "group": "group_salle_A102",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Salle A102",
+        "label": "📍 Salle A102",
+        "format": "{{msg.payload.salle_occupee ? '🟢 Occupée' : '🔴 Vide'}} | {{msg.payload.presence}}/{{msg.payload.capacite}} pers. ({{msg.payload.taux_occupation}}%) | {{msg.payload.temperature}}°C | {{msg.payload.luminosite}} lux",
+        "layout": "row-spread",
+        "x": 550,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "text_B201",
+        "type": "ui_text",
+        "z": "tab_multi_salles",
+        "group": "group_salle_B201",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Salle B201",
+        "label": "📍 Salle B201 (Amphi)",
+        "format": "{{msg.payload.salle_occupee ? '🟢 Occupée' : '🔴 Vide'}} | {{msg.payload.presence}}/{{msg.payload.capacite}} pers. ({{msg.payload.taux_occupation}}%) | {{msg.payload.temperature}}°C | {{msg.payload.luminosite}} lux",
+        "layout": "row-spread",
+        "x": 560,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "text_B202",
+        "type": "ui_text",
+        "z": "tab_multi_salles",
+        "group": "group_salle_B202",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Salle B202",
+        "label": "📍 Salle B202 (TP)",
+        "format": "{{msg.payload.salle_occupee ? '🟢 Occupée' : '🔴 Vide'}} | {{msg.payload.presence}}/{{msg.payload.capacite}} pers. ({{msg.payload.taux_occupation}}%) | {{msg.payload.temperature}}°C | {{msg.payload.luminosite}} lux",
+        "layout": "row-spread",
+        "x": 560,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "text_C301",
+        "type": "ui_text",
+        "z": "tab_multi_salles",
+        "group": "group_salle_C301",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Salle C301",
+        "label": "📍 Salle C301 (Réunion)",
+        "format": "{{msg.payload.salle_occupee ? '🟢 Occupée' : '🔴 Vide'}} | {{msg.payload.presence}}/{{msg.payload.capacite}} pers. ({{msg.payload.taux_occupation}}%) | {{msg.payload.temperature}}°C | {{msg.payload.luminosite}} lux",
+        "layout": "row-spread",
+        "x": 560,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "mqtt_stats_globales",
+        "type": "mqtt in",
+        "z": "tab_multi_salles",
+        "name": "Stats globales",
+        "topic": "salles/statistiques_globales",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "mqtt_broker",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 120,
+        "y": 300,
+        "wires": [
+            [
+                "gauge_occupation_globale",
+                "text_stats_globales"
+            ]
+        ]
+    },
+    {
+        "id": "gauge_occupation_globale",
+        "type": "ui_gauge",
+        "z": "tab_multi_salles",
+        "name": "Taux occupation global",
+        "group": "group_stats_globales",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "📊 Taux d'occupation global",
+        "label": "%",
+        "format": "{{msg.payload.taux_occupation_global}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "40",
+        "seg2": "70",
+        "diff": false,
+        "className": "",
+        "x": 380,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "text_stats_globales",
+        "type": "ui_text",
+        "z": "tab_multi_salles",
+        "group": "group_stats_globales",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "Stats détaillées",
+        "label": "📈 Statistiques",
+        "format": "👥 {{msg.payload.total_presence}}/{{msg.payload.total_capacite}} personnes | 🏫 {{msg.payload.salles_occupees}}/{{msg.payload.total_salles}} salles occupées | 🌡️ Temp. moy: {{msg.payload.temperature_moyenne}}°C | 💡 Lum. moy: {{msg.payload.luminosite_moyenne}} lux",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 360,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "c25811eba13e89e0",
+        "type": "function",
+        "z": "tab_multi_salles",
+        "name": "Extraire Taux",
+        "func": "msg.payload = msg.payload.taux_occupation_global;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ui_seuil_temp_max",
+        "type": "ui_slider",
+        "z": "tab_configuration",
+        "name": "Seuil Température Max",
+        "label": "🌡️ Température Maximum (°C)",
+        "tooltip": "",
+        "group": "group_seuils",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "config/seuil_temp_max",
+        "topicType": "str",
+        "min": "20",
+        "max": "30",
+        "step": "0.5",
+        "x": 150,
+        "y": 100,
+        "wires": [
+            [
+                "function_update_config"
+            ]
+        ]
+    },
+    {
+        "id": "ui_seuil_temp_min",
+        "type": "ui_slider",
+        "z": "tab_configuration",
+        "name": "Seuil Température Min",
+        "label": "❄️ Température Minimum (°C)",
+        "tooltip": "",
+        "group": "group_seuils",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "config/seuil_temp_min",
+        "topicType": "str",
+        "min": "15",
+        "max": "22",
+        "step": "0.5",
+        "x": 150,
+        "y": 150,
+        "wires": [
+            [
+                "function_update_config"
+            ]
+        ]
+    },
+    {
+        "id": "ui_seuil_luminosite",
+        "type": "ui_slider",
+        "z": "tab_configuration",
+        "name": "Seuil Luminosité",
+        "label": "💡 Luminosité Minimum (lux)",
+        "tooltip": "",
+        "group": "group_seuils",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "config/seuil_luminosite",
+        "topicType": "str",
+        "min": "100",
+        "max": "500",
+        "step": "50",
+        "x": 150,
+        "y": 200,
+        "wires": [
+            [
+                "function_update_config"
+            ]
+        ]
+    },
+    {
+        "id": "ui_switch_controle_auto",
+        "type": "ui_switch",
+        "z": "tab_configuration",
+        "name": "Contrôle Automatique",
+        "label": "⚡ Contrôle Automatique",
+        "tooltip": "",
+        "group": "group_controles",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "config/controle_auto",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "x": 150,
+        "y": 300,
+        "wires": [
+            [
+                "function_update_config"
+            ]
+        ]
+    },
+    {
+        "id": "ui_switch_alertes_email",
+        "type": "ui_switch",
+        "z": "tab_configuration",
+        "name": "Alertes Email",
+        "label": "📧 Notifications Email",
+        "tooltip": "",
+        "group": "group_controles",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "config/alertes_email",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "x": 150,
+        "y": 350,
+        "wires": [
+            [
+                "function_update_config"
+            ]
+        ]
+    },
+    {
+        "id": "function_update_config",
+        "type": "function",
+        "z": "tab_configuration",
+        "name": "Sauvegarder Configuration",
+        "func": "// Stocker la configuration dans le contexte global\nconst config = global.get('iot_config') || {};\n\nif (msg.topic === 'config/seuil_temp_max') {\n    config.seuil_temp_max = msg.payload;\n} else if (msg.topic === 'config/seuil_temp_min') {\n    config.seuil_temp_min = msg.payload;\n} else if (msg.topic === 'config/seuil_luminosite') {\n    config.seuil_luminosite = msg.payload;\n} else if (msg.topic === 'config/controle_auto') {\n    config.controle_auto = msg.payload;\n} else if (msg.topic === 'config/alertes_email') {\n    config.alertes_email = msg.payload;\n}\n\nglobal.set('iot_config', config);\n\n// Publier sur MQTT pour que Python reçoive la config\nmsg.payload = JSON.stringify(config);\nmsg.topic = 'salle_classe/configuration';\n\nnode.status({fill:\"green\",shape:\"dot\",text:\"Config mise à jour\"});\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 420,
+        "y": 225,
+        "wires": [
+            [
+                "mqtt_out_config",
+                "text_config_status"
+            ]
+        ]
+    },
+    {
+        "id": "mqtt_out_config",
+        "type": "mqtt out",
+        "z": "tab_configuration",
+        "name": "Publier Configuration",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "mqtt_broker",
+        "x": 680,
+        "y": 225,
+        "wires": []
+    },
+    {
+        "id": "text_config_status",
+        "type": "ui_text",
+        "z": "tab_configuration",
+        "group": "group_status_config",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Statut Configuration",
+        "label": "✅ Dernière mise à jour",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 690,
+        "y": 275,
+        "wires": []
+    },
+    {
+        "id": "ui_button_export_csv",
+        "type": "ui_button",
+        "z": "tab_configuration",
+        "name": "Exporter CSV",
+        "group": "group_export",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "📥 Télécharger Données CSV",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "file_download",
+        "payload": "export",
+        "payloadType": "str",
+        "topic": "export/csv",
+        "topicType": "str",
+        "x": 150,
+        "y": 450,
+        "wires": [
+            [
+                "function_export_csv"
+            ]
+        ]
+    },
+    {
+        "id": "function_export_csv",
+        "type": "function",
+        "z": "tab_configuration",
+        "name": "Générer Export",
+        "func": "msg.payload = {\n    action: 'export_csv',\n    timestamp: new Date().toISOString()\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 380,
+        "y": 450,
+        "wires": [
+            [
+                "mqtt_out_export"
+            ]
+        ]
+    },
+    {
+        "id": "mqtt_out_export",
+        "type": "mqtt out",
+        "z": "tab_configuration",
+        "name": "Demande Export",
+        "topic": "salle_classe/export",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "mqtt_broker",
+        "x": 580,
+        "y": 450,
+        "wires": []
+    },
+    {
+        "id": "4d0b281088e13530",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-dashboard": "3.6.6"
+        }
+    }
+]
